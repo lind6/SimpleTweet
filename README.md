@@ -44,10 +44,6 @@ Describe any challenges encountered while building the app.
 - Twitter API doesn't seem to grab all tweets visible on my home timeline.  
      I'm not a twitter user, but it appears that there are different classifications of 'following' other users, 
      and only tweets in certain classifications of 'following' are pulled using the Twitter API.
-- Instructions did not make it clear we had to implement relative time for tweets.  
-     It's buried in the submission guidelines, but no mention about it in lecture materials.
-     I did not see this requirement until creating this README for submission at the deadline.
-
 
 ## Open-source libraries used
 
