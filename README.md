@@ -43,7 +43,7 @@ Describe any challenges encountered while building the app.
 
 - Twitter API doesn't read all the posts on my account's timeline.
 - Instructions did not make it clear we had to implement relative time for tweets.  It's buried in the submission guidelines, but no mention about it in lecture materials.
-     I did not see this requirement until creating this README for submission.
+     I did not see this requirement until creating this README for submission at the deadline.
 
 
 ## Open-source libraries used
