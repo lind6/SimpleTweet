@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.codepath.apps.restclienttemplate.models.Tweet
 
-class TweetsAdapter( val tweets: List<Tweet> ) : RecyclerView.Adapter<TweetsAdapter.ViewHolder>() {
+class TweetsAdapter( val tweets: ArrayList<Tweet> ) : RecyclerView.Adapter<TweetsAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder( parent: ViewGroup, viewType: Int ): TweetsAdapter.ViewHolder {
         val context  = parent.context
@@ -35,6 +35,18 @@ class TweetsAdapter( val tweets: List<Tweet> ) : RecyclerView.Adapter<TweetsAdap
 
     override fun getItemCount(): Int {
         return tweets.size
+    }
+
+    // Clean all elements of the recycler
+    fun clear() {
+        tweets.clear()
+        notifyDataSetChanged()
+    }
+
+    // Add a list of items -- change to type used
+    fun addAll( tweetList: List<Tweet> ) {
+        tweets.addAll( tweetList )
+        notifyDataSetChanged()
     }
 
     class ViewHolder( itemView: View) : RecyclerView.ViewHolder( itemView ) {
