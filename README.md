@@ -44,6 +44,9 @@ Describe any challenges encountered while building the app.
 - Twitter API doesn't seem to grab all tweets visible on my home timeline.  
      I'm not a twitter user, but it appears that there are different classifications of 'following' other users, 
      and only tweets in certain classifications of 'following' are pulled using the Twitter API.
+     
+- Had difficulty updating the GIF to demonstrate the video walkthrough.  Apparently github doesn't version media the same way it versions code.
+     Had to upload updates to the GIF under a different filename to get the README.md to acknowledge the changes.
 
 ## Open-source libraries used
 
