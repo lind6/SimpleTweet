@@ -1,4 +1,4 @@
-# Project 2 - *Name of App Here*
+# Project 2 - SimpleTweet
 
 SimpleTweet is an android app that allows a user to view his Twitter timeline. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
@@ -11,7 +11,7 @@ The following **required** functionality is completed:
 - [x] User can **sign in to Twitter** using OAuth login
 - [x]	User can **view tweets from their home timeline**
   - [x] User is displayed the username, name, and body for each tweet
-  - [ ] User is displayed the [relative timestamp](https://gist.github.com/nesquena/f786232f5ef72f6e10a7) for each tweet "8m", "7h"
+  - [x] User is displayed the [relative timestamp](https://gist.github.com/nesquena/f786232f5ef72f6e10a7) for each tweet "8m", "7h"
 - [x] User can refresh tweets timeline by pulling down to refresh
 
 The following **optional** features are implemented:
@@ -33,7 +33,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/lind6/SimpleTweet/blob/master/simple_tweet_1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/lind6/SimpleTweet/blob/master/simple_tweet_1a.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -44,10 +44,9 @@ Describe any challenges encountered while building the app.
 - Twitter API doesn't seem to grab all tweets visible on my home timeline.  
      I'm not a twitter user, but it appears that there are different classifications of 'following' other users, 
      and only tweets in certain classifications of 'following' are pulled using the Twitter API.
-- Instructions did not make it clear we had to implement relative time for tweets.  
-     It's buried in the submission guidelines, but no mention about it in lecture materials.
-     I did not see this requirement until creating this README for submission at the deadline.
-
+     
+- Had difficulty updating the GIF to demonstrate the video walkthrough.  Apparently github doesn't version media the same way it versions code.
+     Had to upload updates to the GIF under a different filename to get the README.md to acknowledge the changes.
 
 ## Open-source libraries used
 
