@@ -1,5 +1,6 @@
 package com.codepath.apps.restclienttemplate
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.codepath.apps.restclienttemplate.models.Tweet
 
+private const val TAG = "TweetsAdapter"
+
 class TweetsAdapter( val tweets: ArrayList<Tweet> ) : RecyclerView.Adapter<TweetsAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder( parent: ViewGroup, viewType: Int ): TweetsAdapter.ViewHolder {
@@ -16,7 +19,7 @@ class TweetsAdapter( val tweets: ArrayList<Tweet> ) : RecyclerView.Adapter<Tweet
         val inflater = LayoutInflater.from( context )
 
         // inflate the item layout
-        val view     = inflater.inflate( R.layout.item_tweet, parent, false )
+        val view = inflater.inflate( R.layout.item_tweet, parent, false )
 
         return ViewHolder( view )
     }
@@ -29,6 +32,9 @@ class TweetsAdapter( val tweets: ArrayList<Tweet> ) : RecyclerView.Adapter<Tweet
 
         holder.tvUsername.text  = tweet.user?.name
         holder.tvTweetBody.text = tweet.body
+        holder.tvTimestamp.text = tweet.createdAt
+
+        Log.i( TAG, "timestamp: " + holder.tvTimestamp.text )
 
         Glide.with( holder.itemView ).load( tweet.user?.publicImageURL ).into( holder.ivProfileImage )
     }
@@ -53,6 +59,7 @@ class TweetsAdapter( val tweets: ArrayList<Tweet> ) : RecyclerView.Adapter<Tweet
         val ivProfileImage = itemView.findViewById<ImageView>( R.id.ivProfileImage )
         val tvUsername     = itemView.findViewById<TextView>(  R.id.tvUsername     )
         val tvTweetBody    = itemView.findViewById<TextView>(  R.id.tvTweetBody    )
+        val tvTimestamp    = itemView.findViewById<TextView>(  R.id.tvTimestamp    )
     }
 
 }

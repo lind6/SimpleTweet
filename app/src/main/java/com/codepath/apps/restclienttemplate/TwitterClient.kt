@@ -18,7 +18,7 @@ import com.github.scribejava.apis.TwitterApi
  * NOTE: You may want to rename this object based on the service i.e TwitterClient or FlickrClient
  *
  */
-class TwitterClient(context: Context) : OAuthBaseClient(
+class TwitterClient( context: Context ) : OAuthBaseClient(
     context, REST_API_INSTANCE, REST_URL, REST_CONSUMER_KEY, REST_CONSUMER_SECRET,
     null, String.format(
         REST_CALLBACK_URL_TEMPLATE,
@@ -53,7 +53,7 @@ class TwitterClient(context: Context) : OAuthBaseClient(
 
     // CHANGE THIS
     // DEFINE METHODS for different API endpoints here
-    fun getHomeTimeline(handler: JsonHttpResponseHandler ) {
+    fun getHomeTimeline( handler: JsonHttpResponseHandler ) {
         val apiUrl = getApiUrl("statuses/home_timeline.json" )
 
         // Can specify query string params directly or through RequestParams.
@@ -61,6 +61,19 @@ class TwitterClient(context: Context) : OAuthBaseClient(
         params.put( "count", "25" )
         params.put( "since_id", 1 )
         client.get( apiUrl, params, handler )
+    }
+
+    // CHANGE THIS
+    // DEFINE METHODS for different API endpoints here
+    fun publishTweet( tweetContent: String,  handler: JsonHttpResponseHandler ) {
+        val apiUrl = getApiUrl("statuses/update.json" )
+
+        // Can specify query string params directly or through RequestParams.
+        val params = RequestParams()
+        params.put( "status", tweetContent )
+
+        // push the tweet
+        client.post( apiUrl, params, "", handler )
     }
 
     /* 1. Define the endpoint URL with getApiUrl and pass a relative path to the endpoint
